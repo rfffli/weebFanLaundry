@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fran Laundry - Solusi Laundry Modern</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #0d47a1, #1976d2);
+            color: #fff;
+        }
+
+        header {
+            background-color: #0d47a1;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        header img {
+            display: block;
+            margin: 0 auto 10px auto;
+            height: 80px;
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        .hero {
+            background-image: url('/Laundry.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 5px #000;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px #000;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #ffffff;
+            color: #0d47a1;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0d47a1;
+        }
+
+        label {
+            margin-top: 20px;
+            display: block;
+            font-weight: 600;
+            color: #0d47a1;
+        }
+
+        input[type="text"],
+        select,
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 2px solid #90caf9;
+            border-radius: 10px;
+            background: #e3f2fd;
+        }
+
+        .button,
+        .pickup-btn {
+            width: 100%;
+            padding: 14px;
+            margin-top: 18px;
+            background-color: #1565c0;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .button:hover,
+        .pickup-btn:hover {
+            background-color: #0d47a1;
+            transform: scale(1.03);
+        }
+
+        .pickup-options {
+            margin-top: 30px;
+        }
+
+        .pickup-btn {
+            background-color: #1976d2;
+        }
+
+        .status-box,
+        .upload-section,
+        .payment-section {
+            background-color: #f1f8ff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 25px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #0d47a1;
+        }
+
+        .payment-image {
+            width: 100%;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            padding: 20px;
+            color: #fff;
+            background-color: #0d47a1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="public/IMG_6134.PNG" alt="Logo Fran Laundry">
+        <h1>Fran Laundry</h1>
+    </header>
+
+    <div class="hero">
+        <h2>Solusi Laundry Dalam Genggaman</h2>
+        <p>Pesan layanan laundry dengan cepat, mudah, dan terpercaya. Kualitas terjaga, layanan profesional.</p>
+    </div>
+
+    <div class="container">
+        <h3>🧾 Formulir Pemesanan</h3>
+        <label for="nama">👤 Nama</label>
+        <input type="text" id="nama" placeholder="Masukkan Nama Anda">
+
+        <label for="telp">📞 No Telp</label>
+        <input type="text" id="telp" placeholder="Contoh: 081234567890">
+
+        <label for="paket">📦 Pilihan Paket</label>
+        <select id="paket">
+            <option>Ekspres (1 hari)</option>
+            <option>Cuci Saja</option>
+            <option>Setrika Saja</option>
+            <option>Cuci + Setrika</option>
+            <option>Reguler (3 hari)</option>
+            <option>Hemat (5 hari)</option>
+        </select>
+
+        <div class="upload-section">
+            <div class="section-title">📤 Upload Bukti Penerimaan</div>
+            <input type="file" accept="image/*">
+            <input type="file" accept="video/*">
+        </div>
+
+        <div class="payment-section">
+            <div class="section-title">💳 Pilihan Pembayaran</div>
+            <select id="pembayaran">
+                <option>Bayar di Tempat</option>
+                <option>Transfer Bank</option>
+                <option>QRIS</option>
+            </select>
+            <img src="public/Laundry.jpeg" alt="Metode Pembayaran" class="payment-image">
+        </div>
+
+        <button class="button" onclick="lanjutOrderan()">🚀 Lanjutkan Orderan</button>
+
+        <div class="pickup-options">
+            <h3>🚚 Pilih Layanan Pick Up</h3>
+            <button class="pickup-btn" onclick="alert('Dipilih: Gojek')">🛵 Gojek</button>
+            <button class="pickup-btn" onclick="alert('Dipilih: Shopee')">📦 Shopee</button>
+            <button class="pickup-btn" onclick="alert('Dipilih: Maxim')">🚕 Maxim</button>
+            <button class="pickup-btn" onclick="alert('Dipilih: Grab')">🚗 Grab</button>
+            <button class="button" onclick="alert('Ambil sendiri di tempat')">📍 Ambil di Tempat</button>
+        </div>
+
+        <div class="status-box">
+            <h3>📋 Cek Status Pesanan</h3>
+            <label for="namaCek">Nama Pemesan</label>
+            <input type="text" id="namaCek" placeholder="Nama Anda">
+            <label for="nomorCek">Nomor Pesanan</label>
+            <input type="text" id="nomorCek" placeholder="Nomor Pesanan Anda">
+            <button class="button" onclick="cekStatus()">🔍 Cek Status</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; Dibuat dengan 💙 2025 Fran Laundry
+    </footer>
+
+    <script>
+        function lanjutOrderan() {
+            const nama = document.getElementById('nama').value;
+            const telp = document.getElementById('telp').value;
+            const paket = document.getElementById('paket').value;
+            const pembayaran = document.getElementById('pembayaran').value;
+            alert(`Orderan berhasil:\nNama: ${nama}\nTelp: ${telp}\nPaket: ${paket}\nPembayaran: ${pembayaran}`);
+        }
+
+        function cekStatus() {
+            const nama = document.getElementById('namaCek').value;
+            const nomor = document.getElementById('nomorCek').value;
+            alert(`Status pesanan untuk:\nNama: ${nama}\nNomor: ${nomor}`);
+        }
+    </script>
+
+</body>
+
+</html>
